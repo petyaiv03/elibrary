@@ -30,7 +30,7 @@ User::~User()
 void User::copy(const User& other)
 {
 	username = new char[strlen(other.username) + 1];
-	strcpy(other.username, username);
+	//strcpy(other.username, username);
 }
 
 void User::clear()

@@ -1,4 +1,5 @@
 #include "Book.h"
+#include <cstring>
 
 Book::Book()
 {
@@ -9,7 +10,6 @@ Book::Book()
 	rating = 0;
 	ISBN[0] = '\0';
 }
-//sekunda ;/
 
 Book::Book(const Book& other)
 	:Book()//prosto inicializira promenlivite ;D 
@@ -58,3 +58,40 @@ void Book::clear()
 	delete[] file_name;
 	delete[] resume;
 }
+
+std::istream& operator>>(std::istream& in, const Book& other)
+{
+	in >> other.author;
+	in >> other.title;
+	in >> other.file_name;
+	in >> other.resume;
+	char ratingChar;
+	in >> ratingChar;
+	//other.rating = (double) ratingChar;
+	return in;
+
+}
+
+std::ostream& operator<<(std::ostream& out, const Book& other)
+{
+	out << "Author: ";
+	out << other.author;
+	out << " ";
+	out << "Title: ";
+	out << other.title;
+	out << " ";
+	out << "File name: ";
+	out << other.file_name;
+	out << " ";
+	out << "Resume: ";
+	out << other.resume;
+	out << " ";
+	out << "Rating: ";
+	out << other.rating;
+	out << " ";
+	out << "ISBN: ";
+	out << other.ISBN;
+	out << " ";
+}
+
+

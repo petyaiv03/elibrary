@@ -27,6 +27,21 @@
     <ClCompile Include="Library.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="String.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="String.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="trashMaybe.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h">

@@ -1,0 +1,6 @@
+﻿  Vector.cpp
+  Vector.h
+  Generating Code...
+x64\Debug\String.obj : warning LNK4042: object specified more than once; extras ignored
+x64\Debug\Vector.obj : warning LNK4042: object specified more than once; extras ignored
+  ELibrary.vcxproj -> C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\x64\Debug\ELibrary.exe
