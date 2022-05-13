@@ -1,5 +1,6 @@
 #pragma once
 #include "Book.h"
+
 class Library {
 private:
 	//masiv ot knigi?
@@ -11,6 +12,7 @@ public:
 	Library(const Library& other);
 	Library& operator=(const Library& other);
 	~Library();
+	void createBook();
 
 private:
 	void copy(const Library& other);

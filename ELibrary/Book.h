@@ -1,15 +1,17 @@
 #include <cstring>
 #include <iostream>
+#include <fstream>
+#include "string.h"
 
 class Book
 {
 private:
-	char* author;
-	char* title;
-	char* file_name;
-	char* resume;
+	String author;
+	String title;
+	String file_name;
+	String resume;
 	double rating;
-	char ISBN[28];
+	String ISBN;
 	/*
 	The ISBN is ten digits long if assigned before 2007,
 	and thirteen digits long if assigned on or after 1 January 2007.
@@ -20,13 +22,10 @@ private:
 
 public:
 	Book();
-	Book(const Book& other);
-	Book& operator = (const Book& other);
-	//~Book();
+	Book(String _author, String _title, String _file_name, String _resume, double _rating, String _ISBN);
+	void bookSerialize(std::ofstream& out) const;
+
 	friend std::istream& operator >> (std::istream& in, const Book& other);
 	friend std::ostream& operator << (std::ostream& out, const Book& other);
-private:
 
-	void copy(const Book& other);
-	void clear();
 }; 

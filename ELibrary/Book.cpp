@@ -8,56 +8,44 @@ Book::Book()
 	file_name = nullptr;
 	resume = nullptr;
 	rating = 0;
-	ISBN[0] = '\0';
+	ISBN = nullptr;
 }
 
-Book::Book(const Book& other)
-	:Book()//prosto inicializira promenlivite ;D 
+Book::Book(String _author, String _title, String _file_name, String _resume, double _rating, String _ISBN)
 {
-	copy(other);
+	author = _author;
+	title = _title;
+	file_name = _file_name;
+	resume = _resume;
+	rating = _rating;
+	ISBN = _ISBN;
 }
 
-Book& Book::operator=(const Book& other)
+void Book::bookSerialize(std::ofstream& out) const
 {
-	if (this != &other)
-	{
-		clear();
-		this->copy(other);
-	}
-	return *this;
+	int length_author = author.getSize() + 1;
+	out.write((const char*)&length_author, sizeof(length_author));
+	out.write(author.str(), length_author);
+
+	int length_title = title.getSize() + 1;
+	out.write((const char*)&length_title, sizeof(length_title));
+	out.write(title.str(), length_title);
+
+	int length_file_name = file_name.getSize() + 1;
+	out.write((const char*)&length_file_name, sizeof(length_file_name));
+	out.write(file_name.str(), length_file_name);
+
+	int length_resume = resume.getSize() + 1;
+	out.write((const char*)&length_resume, sizeof(length_resume));
+	out.write(resume.str(), length_resume);
+
+	out.write((const char*)&rating, sizeof(rating));
+
+	int length_ISBN = ISBN.getSize() + 1;
+	out.write((const char*)&length_ISBN, sizeof(length_ISBN));
+	out.write(ISBN.str(), length_ISBN);
 }
 
-Book::~Book()
-{
-	clear();
-}
-
-void Book::copy(const Book& other)
-{
-	author = new char[strlen(other.author) + 1];
-	strcpy(author, other.author);
-
-	title = new char[strlen(other.title) + 1];
-	strcpy(title, other.title);
-
-	file_name = new char[strlen(other.file_name) + 1];
-	strcpy(file_name, other.file_name);
-
-	resume = new char[strlen(other.resume) + 1];
-	strcpy(resume, other.resume);
-
-	rating = other.rating;
-
-	strcpy(ISBN, other.ISBN);
-}
-
-void Book::clear()
-{
-	delete[] author;
-	delete[] title;
-	delete[] file_name;
-	delete[] resume;
-}
 
 std::istream& operator>>(std::istream& in, const Book& other)
 {
@@ -92,6 +80,7 @@ std::ostream& operator<<(std::ostream& out, const Book& other)
 	out << "ISBN: ";
 	out << other.ISBN;
 	out << " ";
+	return out;
 }
 
 

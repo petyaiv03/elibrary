@@ -17,6 +17,7 @@ public:
 
 	void add(const String& other);
 	void print() const;
+	const char* str() const;
 
 	friend std::istream& operator >> (std::istream& in, const String& other_string);
 	friend std::ostream& operator << (std::ostream& out, const String& other_string);

@@ -67,6 +67,11 @@ void String::print() const
 	std::cout << string;
 }
 
+const char* String::str() const
+{
+	return string;
+}
+
 void String::copy(const String& other)
 {
 	string = new char[strlen(other.string) + 1];
