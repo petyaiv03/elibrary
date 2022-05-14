@@ -4,7 +4,7 @@
 
 class String {
 private:
-	char* string;
+	char* data;
 
 public:
 	String();
@@ -19,8 +19,8 @@ public:
 	void print() const;
 	const char* str() const;
 
-	friend std::istream& operator >> (std::istream& in, const String& other_string);
-	friend std::ostream& operator << (std::ostream& out, const String& other_string);
+	friend std::istream& operator >> (std::istream& in, String& string);
+	friend std::ostream& operator << (std::ostream& out, const String& string);
 
 private:
 	void copy(const String& other);

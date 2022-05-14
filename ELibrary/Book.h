@@ -1,7 +1,8 @@
+#pragma once
 #include <cstring>
 #include <iostream>
 #include <fstream>
-#include "string.h"
+#include "String.h"
 
 class Book
 {
@@ -24,8 +25,14 @@ public:
 	Book();
 	Book(String _author, String _title, String _file_name, String _resume, double _rating, String _ISBN);
 	void bookSerialize(std::ofstream& out) const;
+	String getAuthor() const;
+	String getTitle() const;
+	String getFileName() const;
+	String getResume() const;
+	double getRating() const;
+	String getISBN() const;
 
-	friend std::istream& operator >> (std::istream& in, const Book& other);
-	friend std::ostream& operator << (std::ostream& out, const Book& other);
+	friend std::istream& operator >> (std::istream& in, Book& book);
+	friend std::ostream& operator << (std::ostream& out, const Book& book);
 
 }; 

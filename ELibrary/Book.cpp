@@ -1,5 +1,5 @@
-#include "Book.h"
 #include <cstring>
+#include "Book.h"
 
 Book::Book()
 {
@@ -46,13 +46,44 @@ void Book::bookSerialize(std::ofstream& out) const
 	out.write(ISBN.str(), length_ISBN);
 }
 
-
-std::istream& operator>>(std::istream& in, const Book& other)
+String Book::getAuthor() const
 {
-	in >> other.author;
-	in >> other.title;
-	in >> other.file_name;
-	in >> other.resume;
+	return author;
+}
+
+String Book::getTitle() const
+{
+	return title;
+}
+
+String Book::getFileName() const
+{
+	return file_name;
+}
+
+String Book::getResume() const
+{
+	return resume;
+}
+
+double Book::getRating() const
+{
+	return rating;
+}
+
+String Book::getISBN() const
+{
+	return ISBN;
+}
+
+
+
+std::istream& operator>>(std::istream& in,  Book& book)
+{
+	in >> book.author;
+	in >> book.title;
+	in >> book.file_name;
+	in >> book.resume; //TODO:
 	char ratingChar;
 	in >> ratingChar;
 	//other.rating = (double) ratingChar;
@@ -60,25 +91,25 @@ std::istream& operator>>(std::istream& in, const Book& other)
 
 }
 
-std::ostream& operator<<(std::ostream& out, const Book& other)
+std::ostream& operator<<(std::ostream& out, const Book& book)
 {
 	out << "Author: ";
-	out << other.author;
+	out << book.author;
 	out << " ";
 	out << "Title: ";
-	out << other.title;
+	out << book.title;
 	out << " ";
 	out << "File name: ";
-	out << other.file_name;
+	out << book.file_name;
 	out << " ";
 	out << "Resume: ";
-	out << other.resume;
+	out << book.resume;
 	out << " ";
 	out << "Rating: ";
-	out << other.rating;
+	out << book.rating;
 	out << " ";
 	out << "ISBN: ";
-	out << other.ISBN;
+	out << book.ISBN;
 	out << " ";
 	return out;
 }
