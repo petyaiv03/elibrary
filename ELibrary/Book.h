@@ -24,6 +24,7 @@ private:
 public:
 	Book();
 	Book(String _author, String _title, String _file_name, String _resume, double _rating, String _ISBN);
+	Book(std::ifstream& in);
 	void bookSerialize(std::ofstream& out) const;
 	String getAuthor() const;
 	String getTitle() const;

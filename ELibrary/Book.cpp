@@ -21,6 +21,16 @@ Book::Book(String _author, String _title, String _file_name, String _resume, dou
 	ISBN = _ISBN;
 }
 
+Book::Book(std::ifstream& in)
+{
+	author.deserialize(in);
+	title.deserialize(in);
+	file_name.deserialize(in);
+	resume.deserialize(in);
+	in.read((char*)&rating, sizeof(rating));
+	ISBN.deserialize(in);
+}
+
 void Book::bookSerialize(std::ofstream& out) const
 {
 	int length_author = author.getSize() + 1;

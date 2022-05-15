@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <cstring>
+#include <fstream>
 
 class String {
 private:
@@ -18,6 +19,7 @@ public:
 	void add(const String& other);
 	void print() const;
 	const char* str() const;
+	void deserialize(std::ifstream& in);
 
 	friend std::istream& operator >> (std::istream& in, String& string);
 	friend std::ostream& operator << (std::ostream& out, const String& string);

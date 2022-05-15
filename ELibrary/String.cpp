@@ -72,6 +72,17 @@ const char* String::str() const
 	return data;
 }
 
+void String::deserialize(std::ifstream& in)
+{
+	int length;
+	in.read((char*)&length, sizeof(length));
+	clear();
+	data = new char[length];
+	in.read(data, length);
+}
+
+
+
 void String::copy(const String& other)
 {
 	data = new char[strlen(other.data) + 1];

@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClInclude Include="Book.h" />
     <ClInclude Include="commands.h" />
+    <ClInclude Include="fileHelper.h" />
     <ClInclude Include="Library.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
