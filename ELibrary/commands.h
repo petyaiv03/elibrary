@@ -4,6 +4,7 @@
 #include "Library.h"
 #include "fileHelper.h"
 
+///function communicates with the user and calls the commands
 void Commands()
 {
 	char entry[4];

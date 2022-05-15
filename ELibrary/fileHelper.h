@@ -3,6 +3,7 @@
 #include <fstream>
 #include "Library.h"
 
+/// function that opens and closes the file to write in it
 void writeInFile(const Library& lib) 
 {
 	std::ofstream out;
@@ -15,7 +16,8 @@ void writeInFile(const Library& lib)
 	out.close();
 }
 
-void readFromFile(Library& lib)
+///function that opens and closes the file to read from it
+void readFromFile(Library& lib) 
 {
 	std::ifstream in;
 

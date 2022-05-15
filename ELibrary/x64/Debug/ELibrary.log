@@ -1,2 +1,21 @@
-﻿  main.cpp
+﻿  Book.cpp
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\Book.cpp(36,42): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\Book.cpp(40,40): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\Book.cpp(44,48): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\Book.cpp(48,42): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\Book.cpp(54,38): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Library.cpp
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\Library.cpp(312,7): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\Library.cpp(332,7): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\Library.cpp(352,7): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+  main.cpp
+  String.cpp
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\String.cpp(20,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\String.cpp(59,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\String.cpp(60,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\String.cpp(89,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\String.cpp(104,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  String.h
+  Generating Code...
+x64\Debug\String.obj : warning LNK4042: object specified more than once; extras ignored
   ELibrary.vcxproj -> C:\Users\Petia\Desktop\E-Library\elibrary\ELibrary\x64\Debug\ELibrary.exe

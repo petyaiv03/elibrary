@@ -47,10 +47,11 @@ size_t String::getSize() const
 	return strlen(data);
 }
 
-String String::operator+(const String& other)
+String String::operator+(const String& other) const
 {
-	add(other);
-	return nullptr;
+	String result(*this);
+	result.add(other);
+	return result;
 }
 
 void String::add(const String& other)

@@ -93,10 +93,10 @@ std::istream& operator>>(std::istream& in,  Book& book)
 	in >> book.author;
 	in >> book.title;
 	in >> book.file_name;
-	in >> book.resume; //TODO:
-	char ratingChar;
-	in >> ratingChar;
-	//other.rating = (double) ratingChar;
+	in >> book.resume; //TODO: entry of more than one word 
+	in >> book.rating;
+	in >> book.ISBN;
+	
 	return in;
 
 }
